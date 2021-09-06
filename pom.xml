@@ -15,12 +15,21 @@
     <description>CMS内容管理</description>
     <properties>
         <java.version>1.8</java.version>
+        <lombok.version>1.18.20</lombok.version>
         <mybatis-plus.version>3.4.3</mybatis-plus.version>
         <dynamic-datasource.version>3.4.1</dynamic-datasource.version>
         <druid.version>1.2.6</druid.version>
         <mysql.version>5.1.49</mysql.version>
+        <p6spy.version>3.8.5</p6spy.version>
     </properties>
     <dependencies>
+
+        <!--java简写工具-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
 
         <!--spring boot web 相关-->
         <dependency>
@@ -61,6 +70,13 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
+        </dependency>
+
+        <!-- p6spy sql输出格式-->
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+            <version>${p6spy.version}</version>
         </dependency>
 
     </dependencies>
