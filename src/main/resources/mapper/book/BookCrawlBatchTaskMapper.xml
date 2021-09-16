@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.y3tu.cms.book.mapper.BookCrawlBatchTaskMapper">
+
+    <resultMap id="BaseResultMap" type="com.y3tu.cms.book.entity.BookCrawlBatchTask">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="sourceId" column="source_id" jdbcType="INTEGER"/>
+            <result property="crawlCountSuccess" column="crawl_count_success" jdbcType="INTEGER"/>
+            <result property="crawlCountTarget" column="crawl_count_target" jdbcType="INTEGER"/>
+            <result property="taskStatus" column="task_status" jdbcType="BOOLEAN"/>
+            <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
+            <result property="endTime" column="end_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,source_id,crawl_count_success,
+        crawl_count_target,task_status,start_time,
+        end_time
+    </sql>
+</mapper>

@@ -21,6 +21,7 @@
         <druid.version>1.2.6</druid.version>
         <mysql.version>5.1.49</mysql.version>
         <p6spy.version>3.8.5</p6spy.version>
+        <tools.version>0.0.1</tools.version>
     </properties>
     <dependencies>
 
@@ -29,6 +30,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.y3tu</groupId>
+            <artifactId>tools-kit</artifactId>
+            <version>${tools.version}</version>
         </dependency>
 
         <!--spring boot web 相关-->

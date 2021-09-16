@@ -1,6 +1,8 @@
 package com.y3tu.cms.configure;
 
 import com.p6spy.engine.spy.appender.MessageFormattingStrategy;
+import com.y3tu.tools.kit.text.StrUtil;
+import com.y3tu.tools.kit.time.DateUtil;
 
 /**
  * 自定义 p6spy sql输出格式
@@ -11,7 +13,7 @@ public class P6spySqlFormatConfigure implements MessageFormattingStrategy {
 
     @Override
     public String formatMessage(int connectionId, String now, long elapsed, String category, String prepared, String sql, String url) {
-        return StrUtil.isNotBlank(sql) ? DateUtil.now()
+        return StrUtil.isNotBlank(sql) ? DateUtil.now().format(DateUtil.NORM_DATETIME_PATTERN_FORMATTER)
                 + " | 耗时 " + elapsed + " ms | SQL 语句：" + StrUtil.LF + sql.replaceAll("[\\s]+", StrUtil.SPACE) + ";" : StrUtil.EMPTY;
     }
 }
