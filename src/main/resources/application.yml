@@ -35,3 +35,6 @@ spring:
           driver-class-name: com.mysql.jdbc.Driver
           url: jdbc:mysql://cdb-plx1fn42.cd.tencentcdb.com:10149/y3tu-cms??allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
       primary: cms
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*/*.xml

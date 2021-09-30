@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.y3tu</groupId>
     <artifactId>cms</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>cms</name>
     <description>CMS内容管理</description>
     <properties>
@@ -18,7 +18,7 @@
         <lombok.version>1.18.20</lombok.version>
         <mybatis-plus.version>3.4.3</mybatis-plus.version>
         <dynamic-datasource.version>3.4.1</dynamic-datasource.version>
-        <druid.version>1.2.6</druid.version>
+        <druid.version>1.2.5</druid.version>
         <mysql.version>5.1.49</mysql.version>
         <p6spy.version>3.8.5</p6spy.version>
         <tools.version>0.0.1</tools.version>
@@ -34,7 +34,7 @@
 
         <dependency>
             <groupId>com.y3tu</groupId>
-            <artifactId>tools-kit</artifactId>
+            <artifactId>tools-web</artifactId>
             <version>${tools.version}</version>
         </dependency>
 
@@ -94,16 +94,21 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+            </plugin>
         </plugins>
         <resources>
             <resource>
                 <!--打包时排除不需要的前端文件-->
-                <filtering>true</filtering>
                 <directory>src/main/resources</directory>
                 <includes>
                     <include>webapp/dist/**</include>
                     <include>**.properties</include>
                     <include>**.yml</include>
+                    <include>mapper/*/*.xml</include>
                 </includes>
             </resource>
         </resources>

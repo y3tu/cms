@@ -7,14 +7,20 @@
     <resultMap id="BaseResultMap" type="com.y3tu.cms.book.entity.BookCrawlSingleTask">
             <id property="id" column="id" jdbcType="BIGINT"/>
             <result property="sourceId" column="source_id" jdbcType="INTEGER"/>
+            <result property="sourceName" column="source_name" jdbcType="VARCHAR"/>
             <result property="sourceBookId" column="source_book_id" jdbcType="VARCHAR"/>
+            <result property="catId" column="cat_id" jdbcType="INTEGER"/>
+            <result property="bookName" column="book_name" jdbcType="VARCHAR"/>
+            <result property="authorName" column="author_name" jdbcType="VARCHAR"/>
             <result property="taskStatus" column="task_status" jdbcType="BOOLEAN"/>
             <result property="excCount" column="exc_count" jdbcType="TINYINT"/>
             <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
     <sql id="Base_Column_List">
-        id,source_id,source_book_id,
-        task_status,exc_count,create_time
+        id,source_id,source_name,
+        source_book_id,cat_id,book_name,
+        author_name,task_status,exc_count,
+        create_time
     </sql>
 </mapper>

@@ -4,14 +4,18 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
+
 import lombok.Data;
 
 /**
  * 小说内容表
- * @TableName book_content
+ * book_content
+ *
+ * @author y3tu
  */
-@TableName(value ="book_content")
+@TableName(value = "book_content")
 @Data
 public class BookContent implements Serializable {
     /**

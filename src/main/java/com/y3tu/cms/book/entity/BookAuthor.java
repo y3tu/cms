@@ -51,14 +51,14 @@ public class BookAuthor implements Serializable {
     private String email;
 
     /**
-     * 作品方向，0：男频，1：女频
+     * 作品方向，M：男频，F：女频
      */
-    private Byte workDirection;
+    private String workDirection;
 
     /**
-     * 0：待审核，1：审核通过，正常，2：审核不通过
+     * 00W：待审核，00A：审核通过，正常，00X：审核不通过
      */
-    private Byte status;
+    private String status;
 
     /**
      * 创建时间

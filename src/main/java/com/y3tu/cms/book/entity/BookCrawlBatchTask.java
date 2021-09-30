@@ -4,15 +4,19 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * 批量抓取任务表
- * @TableName book_crawl_batch_task
+ * book_crawl_batch_task
+ *
+ * @author y3tu
  */
-@TableName(value ="book_crawl_batch_task")
+@TableName(value = "book_crawl_batch_task")
 @Data
 public class BookCrawlBatchTask implements Serializable {
     /**
@@ -37,9 +41,9 @@ public class BookCrawlBatchTask implements Serializable {
     private Integer crawlCountTarget;
 
     /**
-     * 任务状态，1：正在运行，0已停止
+     * 任务状态，00R：正在运行，00S:已停止
      */
-    private Boolean taskStatus;
+    private String taskStatus;
 
     /**
      * 任务开始时间

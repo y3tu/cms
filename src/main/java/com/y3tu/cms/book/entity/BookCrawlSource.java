@@ -4,15 +4,19 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * 爬虫源表
- * @TableName book_crawl_source
+ * book_crawl_source
+ *
+ * @author y3tu
  */
-@TableName(value ="book_crawl_source")
+@TableName(value = "book_crawl_source")
 @Data
 public class BookCrawlSource implements Serializable {
     /**
@@ -32,9 +36,9 @@ public class BookCrawlSource implements Serializable {
     private String crawlRule;
 
     /**
-     * 爬虫源状态，0：关闭，1：开启
+     * 爬虫源状态，00X：关闭，00A：开启
      */
-    private Boolean sourceStatus;
+    private String sourceStatus;
 
     /**
      * 创建时间

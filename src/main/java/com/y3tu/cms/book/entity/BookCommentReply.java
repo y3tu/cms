@@ -4,15 +4,19 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * 小说评论回复表
- * @TableName book_comment_reply
+ * book_comment_reply
+ *
+ * @author y3tu
  */
-@TableName(value ="book_comment_reply")
+@TableName(value = "book_comment_reply")
 @Data
 public class BookCommentReply implements Serializable {
     /**
@@ -32,9 +36,9 @@ public class BookCommentReply implements Serializable {
     private String replyContent;
 
     /**
-     * 审核状态，0：待审核，1：审核通过，2：审核不通过
+     * 00W：待审核，00A：审核通过，正常，00X：审核不通过
      */
-    private Boolean auditStatus;
+    private String auditStatus;
 
     /**
      * 回复时间

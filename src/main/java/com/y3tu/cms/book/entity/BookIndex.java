@@ -4,15 +4,19 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * 小说目录表
- * @TableName book_index
+ * book_index
+ *
+ * @author y3tu
  */
-@TableName(value ="book_index")
+@TableName(value = "book_index")
 @Data
 public class BookIndex implements Serializable {
     /**
@@ -42,17 +46,17 @@ public class BookIndex implements Serializable {
     private Integer wordCount;
 
     /**
-     * 是否收费，1：收费，0：免费
+     * 是否收费 00A：是，00X：否
      */
-    private Byte isVip;
+    private String isVip;
 
     /**
-     * 
+     *
      */
     private Date createTime;
 
     /**
-     * 
+     *
      */
     private Date updateTime;
 
