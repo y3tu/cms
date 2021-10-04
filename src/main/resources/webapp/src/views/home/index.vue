@@ -12,7 +12,9 @@
           <el-tab-pane label="导航" name="navigation">
             <component-weblink></component-weblink>
           </el-tab-pane>
-          <el-tab-pane label="小说" name="book">小说</el-tab-pane>
+          <el-tab-pane label="小说" name="book">
+            <Book/>
+          </el-tab-pane>
         </el-tabs>
       </el-col>
     </el-row>
@@ -24,13 +26,15 @@
 
 import Search from "@/components/search";
 import Weblink from "@/components/weblink"
+import Book from '../book'
 
 export default {
   name: 'home',
   components: {
     // 绑定组件标签
     "component-search": Search,
-    "component-weblink": Weblink
+    "component-weblink": Weblink,
+    "Book": Book
   },
   data() {
     return {

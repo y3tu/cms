@@ -64,11 +64,8 @@ export default {
       this.newKey = key;
       e.preventDefault();
     },
-    dragendCategory(key) {
-      console.log("CategoryKey:" + key)
-      if (key !== this.newKey) {
+    dragendCategory() {
 
-      }
     },
     dragover(e) {
       e.preventDefault()

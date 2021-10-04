@@ -50,4 +50,11 @@ public interface BookService extends IService<Book> {
      * @param bookContentList 内容集合
      */
     void saveBookAndIndexAndContent(Book book, List<BookIndex> bookIndexList, List<BookContent> bookContentList);
+
+    /**
+     * 删除书籍
+     * @param id
+     * @return
+     */
+    boolean delete(long id);
 }

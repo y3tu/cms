@@ -81,6 +81,10 @@ public class BookServiceImpl extends ServiceImpl<BookMapper, Book> implements Bo
         }
     }
 
+    @Override
+    public boolean delete(long id) {
+        return false;
+    }
 }
 
 

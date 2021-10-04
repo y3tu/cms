@@ -1,7 +1,5 @@
 package com.y3tu.cms.book.crawl;
 
-import com.y3tu.cms.book.entity.Book;
-
 /**
  * 小说章节处理器
  *
